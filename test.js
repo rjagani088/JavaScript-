@@ -177,7 +177,7 @@ for(var a = 1; a <=10; a++){
         continue;
     }
     document.write("number : " + a + "<br>");
-}*/
+}
 
 //Even & Odd Numbers
 
@@ -186,3 +186,116 @@ for(var a = 1; a<= 10; a++){
         document.write(a + "<br>");
     }
 }
+
+
+//Nested Loop
+for(var a = 1;a <= 100; a = a+10){
+    for(var b = a; b < a+10; b++){
+        document.write(b + " ");
+    }
+    document.write("<br>");
+}
+
+//Nested Loop - II
+for(var a = 1;a <= 5; a++){
+    for(var b = 1;b <= a; b++){
+        document.write(b + " ");
+    }
+    document.write("<br>");
+}
+
+for(var a = 1;a <= 5; a++){
+    for(var b = 1;b <= a; b++){
+        document.write(a + " ");
+    }
+    document.write("<br>");
+}
+
+for(var a = 5;a >= 1; a--){
+    for(var b = 1;b <= a; b++){
+        document.write(a + " ");
+    }
+    document.write("<br>");
+}
+
+for(var a = 5;a >= 1; a--){
+    for(var b = a;b >= 1; b--){
+        document.write(b + " ");
+    }
+    document.write("<br>");
+}
+
+//Arrays
+
+var are = [10,20,30,40,50];
+
+for (var a = 0;a <= 4;a++){
+    document.write(are[a] + "<br>");
+}
+
+var are = new Array(3);
+for(var g = 0; g < 3;g++){
+    are[g] = prompt("enter the value : ");
+}
+
+for (var a = 0;a < 3 ;a++){
+    document.write(are[a] + "<br>");
+}
+
+//Multidimensional Arrays
+
+var are = [
+    ["name","age","gender","calss"],
+    ["herry",17,"male","B.COM"],
+    ["tom",20,"male","CA"],
+    ["sunny",24,"female","CA"],
+    ["jay",23,"male","BAC"]
+];
+document.write("<table border='1px' cellspacing='0'>");z
+for(var a = 0;a < 5;a++ ){
+    document.write("<tr>");
+    for(var b = 0;b < 4;b++){
+        document.write("<td>" + are[a][b] +  "</td>");
+    }
+    document.write("</tr>");
+}
+document.write("</table>");
+
+
+//Modify & Delete Array
+
+var a = ["herry",17,"male","B.COM"];
+ 
+document.write(a + "<br>");
+a[0] = "sunny";
+document.write(a + "<br>");
+delete a [1];
+document.write(a + "<br>");
+
+//Array Sort & Reverse
+
+var a = ["Ajay","Raj","Jay","Karan"];
+
+document.write(a + "<br>");
+a.sort();
+document.write(a + "<br>");
+a.reverse();
+document.write(a + "<br>");
+
+//Array Pop & Push 
+var a = ["Ajay","Raj","Jay","Karan"];
+
+document.write(a + "<br>");
+a.pop();
+document.write(a + "<br>");
+a.push("Rahul");
+document.write(a + "<br>");*/
+
+//Array Shift & Unshift
+var a = ["Ajay","Raj","Jay","Karan"];
+
+document.write(a + "<br>");
+a.shift();
+document.write(a + "<br>");
+a.unshift("Rahul");
+document.write(a + "<br>");
