@@ -227,19 +227,19 @@ for(var a = 5;a >= 1; a--){
 
 //Arrays
 
-var are = [10,20,30,40,50];
+var ary = [10,20,30,40,50];
 
 for (var a = 0;a <= 4;a++){
-    document.write(are[a] + "<br>");
+    document.write(ary[a] + "<br>");
 }
 
-var are = new Array(3);
+var ary = new Array(3); 
 for(var g = 0; g < 3;g++){
-    are[g] = prompt("enter the value : ");
+    ary[g] = prompt("enter the value : ");
 }
 
 for (var a = 0;a < 3 ;a++){
-    document.write(are[a] + "<br>");
+    document.write(ary[a] + "<br>");
 }
 
 //Multidimensional Arrays
@@ -272,6 +272,7 @@ document.write(a + "<br>");
 delete a [1];
 document.write(a + "<br>");
 
+
 //Array Sort & Reverse
 
 var a = ["Ajay","Raj","Jay","Karan"];
@@ -282,6 +283,7 @@ document.write(a + "<br>");
 a.reverse();
 document.write(a + "<br>");
 
+
 //Array Pop & Push 
 var a = ["Ajay","Raj","Jay","Karan"];
 
@@ -289,7 +291,8 @@ document.write(a + "<br>");
 a.pop();
 document.write(a + "<br>");
 a.push("Rahul");
-document.write(a + "<br>");*/
+document.write(a + "<br>");
+
 
 //Array Shift & Unshift
 var a = ["Ajay","Raj","Jay","Karan"];
@@ -299,3 +302,118 @@ a.shift();
 document.write(a + "<br>");
 a.unshift("Rahul");
 document.write(a + "<br>");
+
+
+//Concat & Join
+var a = ["Ajay","Raj","Jay","Karan"];
+var b = ["Rahul","Nikuj"];
+var c = a.concat(b);
+document.write(c + "<br>");
+var d = c.join(" - ");
+document.write(d);
+
+
+//Array Slice & Splice
+var a = ["Ajay","Raj","Jay","Karan"];
+document.write(a + "<br>");
+
+var b = a.slice(-1);
+document.write(b + "<br>");
+
+a.splice(2,0,"aman",);
+document.write(a + "<br>"); 
+
+
+
+// isArray
+var a = ["Ajay","Raj","Jay","Karan"];
+//var a = 40;
+document.write(a + "<br>");
+var b = Array.isArray(a);
+document.write(b + "<br>");
+
+
+//Array Includes
+var a = ["Ajay","Raj","Jay","Karan"];
+document.write(a + "<br>");
+
+var b = a.includes("Rahul");
+document.write(b + "<br>");
+
+
+//Array Some & Every Methods
+var age = [18,20,18,30,34];
+document.write(age + "<br>");
+
+var b = age.every(checkadult);
+document.write(b + "<br>");
+
+function checkadult(age){
+    return age >= 18;
+}
+
+
+//Array find & findIndex
+var age = [10,20,18,30,34];
+document.write(age + "<br>");
+
+var b = age.findIndex(checkadult);
+document.write(b + "<br>");
+
+function checkadult(age){
+    return age >= 18;
+}
+
+
+//Array Filter
+var age = [10,20,18,30,34];
+document.write(age + "<br>");
+
+var b = age.filter(checkadult);
+document.write(b + "<br>");
+
+function checkadult(age){
+    return age >= 18;
+}
+
+
+//Array toString, valueOf & fill
+var a = ["Ajay","Raj","Jay","Karan"];
+a.toString();
+
+document.write(a + "<br>");
+
+var a = ["Ajay","Raj","Jay","Karan"];
+a.fill("ram");
+
+document.write(a);
+
+//forEach Loop
+var a = ["Ajay","Raj","Jay","Karan"];
+a.forEach(function(value, index){
+    document.write(index + ":" + value + "<br>");
+});*/
+
+
+//Objects
+
+var a = {
+    fname : 'Rahul',
+    lname : 'Jagani',
+    age   : 20,
+    email : 'hello@yahoo.net',
+    favmovie : ['dhoom','hero','khiladi'],
+    living : {
+        'city' : 'gujarat',
+        'country' : 'india'
+    },
+    salery : function(){
+        return 2500;
+    },
+    fullname : function(){
+        return this.fname + " " + this.lname;
+    }
+}
+
+console.log(a);
+document.write(a.living.country);
